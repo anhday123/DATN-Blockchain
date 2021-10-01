@@ -8,63 +8,30 @@
 </head>
 <body>
     <div class="container">
-	<form class="login1">
+	<form class="login1" action="/Signup" method="POST" >
 		<h1>SIGN UP</h1>
 		<div class="login2">
 		  <label for="text1" class="form-label">Email</label>
-          <input type="email" class="form-control" id="text1" aria-describedby="emailHelp">
+          <input type="email" name="txtemail" class="form-control" id="text1" aria-describedby="emailHelp">
 		</div>
         <div class="login2">
             <label for="text2" class="form-label">First and last name </label>
-            <input type="text" class="form-control" id="text2" >
+            <input type="text" name="txtname" class="form-control" id="text2" >
         </div>
         <div class="login2">
             <label for="text3" class="form-label">Phone number</label>
-            <input type="number" maxlength="10" class="form-control" id="text3" >
+            <input type="number" name="txtphone" maxlength="10" class="form-control" id="text3" >
         </div>
 		<div class="login2">
             <label for="text4" class="form-label">Password</label>
-            <input type=password" class="form-control" id="text4" >
+            <input type=password" name="txtpass" class="form-control" id="text4" >
         </div>
         <div class="login2">
             <label for="text5" class="form-label">Confrim password</label>
             <input type="password" class="form-control" id="text5" >
         </div>
-		<button type="button" class="btn_login" onclick="Dangki()">SIGN UP</button>
+		<button type="submit" class="btn_login" >SIGN UP</button>
         
-        <script>
-            function Dangki(){
-                var input1 = document.getElementById("text1");
-                var data1 = input1.value;
-                var input2 = document.getElementById("text2");
-                var data2 = input2.value;
-                var input3 = document.getElementById("text3");
-                var data3 = input3.value;
-                var input4 = document.getElementById("text4");
-                var data4 = input4.value;
-                var input5 = document.getElementById("text5");
-                var data5 = input5.value;
-
-
-                if(data1=="" || data1=="" || data2=="" ||data3==""||data4==""||data5==""){
-                    if(data5 !=data4){
-                        alert("Password was wrong")
-                        }
-                    }else{
-                        alert("Please fill all fields!")
-                    }
-			{
-					console.log(data1 + "\n" + data2 +"\n" + data3+"\n" + data4+"\n" + data5);
-					//xóa trong ô input	
-					input1.value="";
-                    input2.value="";
-                    input3.value="";
-                    input4.value="";
-                    input5.value="";
-					
-				}
-            }
-        </script>
 	  </form>
       <script>
           const fromlogin= document.querySelectorAll('.login2 input')

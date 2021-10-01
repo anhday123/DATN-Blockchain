@@ -10,49 +10,21 @@
     <div class="container">
       <form class="login1">
         <h1>LOGIN</h1>
-        <div class="login2">
+        <div class="login2" >
           <label for="text1" class="form-label">Email address</label>
-          <input
-            type="email"
-            class="form-control"
-            id="text1"
-            aria-describedby="emailHelp"
+          <input type="email" name="email-login" class="form-control" id="text1" aria-describedby="emailHelp"
           />
         </div>
         <div class="login2">
           <label for="text2" class="form-label">Password</label>
-          <input type="password" class="form-control" id="text2" />
+          <input type="password" name="password-logn" class="form-control" id="text2" />
         </div>
-        <button type="button" class="btn_login" onclick="Dangnhap()">
-          LOGIN
-        </button>
-
+        <button type="button" class="btn_login" onclick="Dangnhap()">LOGIN</button>
         <span
-          ><br />Do not have an account ?<a href="" onclick="Dangki()">
+          ><br />Do not have an account ?<a href="./SignUp.ejs" >
             Sign Up Here</a
           ></span
         >
-        <script>
-          function Dangnhap() {
-            console.log("dang nhap");
-            //lấy giá trị trong input
-            var input = document.getElementById("text1");
-            var newItem = input.value;
-            var inputpw = document.getElementById("text2");
-            var newItem1 = inputpw.value;
-
-            if (newItem == "" || newItem1 == "") {
-              alert("Please fill all fields!");
-            } else {
-              console.log("email: " + newItem + "mk: " + newItem1);
-              //xóa trong ô input
-              input.value = "";
-              inputpw.value = "";
-            }
-          }
-
-          function Dangki() {}
-        </script>
       </form>
       <script>
         const fromlogin = document.querySelectorAll(".login2 input");
