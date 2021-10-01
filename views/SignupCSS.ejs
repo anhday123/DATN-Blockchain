@@ -1,0 +1,72 @@
+<style>
+    :root{
+        --bg1:#9b59b6;
+        --bg:#3498db;
+        --text:#26dae4;
+    }
+    *{
+        margin: 0;
+        padding: auto;
+        outline: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(to bottom right,var(--bg),var(--bg1));
+    }
+    .container h1 {
+        margin-bottom: 40px;
+    }
+    .login1 {
+        width: 300px;
+        height: 500px;
+        background: #fff;
+        border-radius: 10px;
+        padding: 40px 30px;
+    }
+    .login1 button {
+        height: 40px;
+        width: 100%;
+        margin-bottom: 30px;
+        background: linear-gradient(120deg,var(--bg),var(--bg1));
+        border: none;
+        border-radius: 5px;
+        background-size: 200%;
+        transition: 0.8s;
+        color: oldlace;
+        
+    }
+    .login1 button:hover {
+        background-position: right;
+    }
+    .login2 {
+        margin-bottom: 40px;
+        position: relative;
+    }
+    .login2 input {
+        width: 100%;
+        height: 35px;
+        border: none;
+        border-bottom: 2px solid #ccc;
+        cursor: pointer;
+        padding-left: 10px;
+    }
+    .login2 label {
+        position: absolute;
+        left: 12px;
+        bottom: 12px;
+        transition: 0.5s;
+        
+    }
+    .login2 label.focus {
+        transform: translateY(-45px);
+    }
+    
+    </style>

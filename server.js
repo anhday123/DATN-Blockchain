@@ -11,5 +11,5 @@ server.listen(3000);
 
 
 app.get("/", function(req, res) {
-    res.send("OK");
+    res.render('SignUp')
 });

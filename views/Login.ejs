@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>login</title>
+
+    <%- include("./LoginCSS");%>
+  </head>
+  <body>
+    <div class="container">
+      <form class="login1">
+        <h1>LOGIN</h1>
+        <div class="login2">
+          <label for="text1" class="form-label">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="text1"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="login2">
+          <label for="text2" class="form-label">Password</label>
+          <input type="password" class="form-control" id="text2" />
+        </div>
+        <button type="button" class="btn_login" onclick="Dangnhap()">
+          LOGIN
+        </button>
+
+        <span
+          ><br />Do not have an account ?<a href="" onclick="Dangki()">
+            Sign Up Here</a
+          ></span
+        >
+        <script>
+          function Dangnhap() {
+            console.log("dang nhap");
+            //lấy giá trị trong input
+            var input = document.getElementById("text1");
+            var newItem = input.value;
+            var inputpw = document.getElementById("text2");
+            var newItem1 = inputpw.value;
+
+            if (newItem == "" || newItem1 == "") {
+              alert("Please fill all fields!");
+            } else {
+              console.log("email: " + newItem + "mk: " + newItem1);
+              //xóa trong ô input
+              input.value = "";
+              inputpw.value = "";
+            }
+          }
+
+          function Dangki() {}
+        </script>
+      </form>
+      <script>
+        const fromlogin = document.querySelectorAll(".login2 input");
+        const fromlabel = document.querySelectorAll(".login2 label");
+        for (let i = 0; i < 2; i++) {
+          fromlogin[i].addEventListener("mouseover", function () {
+            fromlabel[i].classList.add("focus");
+          });
+          fromlogin[i].addEventListener("mouseout", function () {
+            if (fromlogin[i].value == "") {
+              fromlabel[i].classList.remove("focus");
+            }
+          });
+        }
+      </script>
+    </div>
+  </body>
+</html>
